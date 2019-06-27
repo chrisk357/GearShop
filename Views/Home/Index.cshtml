@@ -1,4 +1,26 @@
-﻿
+﻿@model GearShop.ViewModels.HomeViewModel
+@{
+    Layout = "_Layout";
+}
 
 <h2>Gear Main</h2>
+
+@foreach (var jersey in Model.Jerseys)
+{
+    <div>
+        <h3>@jersey.JBrand</h3>
+        <h3>@jersey.JModel</h3>
+        <h3>@jersey.JPrice.ToString("c")</h3>
+    </div>
+}
+@foreach (var pant in Model.Pants)
+    {
+     <div>
+         <h3>@pant.PBrand</h3>
+         <h3>@pant.PModel</h3>
+         <h3>@pant.PPrice.ToString("c")</h3>
+     </div>
+
+    }
+
 

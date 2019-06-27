@@ -20,10 +20,10 @@ namespace GearShop.Models
         {
             _jerseys = new List<Jersey>
             {
-                new Jersey{JId = 1, JBrand = "Fox", JModel = "2019 236 Model", JColor = "Red/Black", JSize = "L", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
-                new Jersey{JId = 2, JBrand = "Fox", JModel = "2019 236 Model", JColor = "Red/Black", JSize = "XL", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
-                new Jersey{JId = 3, JBrand = "Fox", JModel = "2019 236 Model", JColor = "Blue/White", JSize = "S", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
-                new Jersey{JId = 4, JBrand = "Fox", JModel = "2019 236 Model", JColor = "Blue/White", JSize = "M", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
+                new Jersey{JId = 1, JBrand = "Fox", JModel = "2019 360 Model", JColor = "Red/Black", JSize = "L", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
+                new Jersey{JId = 2, JBrand = "Fox", JModel = "2019 360 Model", JColor = "Red/Black", JSize = "XL", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
+                new Jersey{JId = 3, JBrand = "Fox", JModel = "2019 360 Model", JColor = "Blue/White", JSize = "S", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
+                new Jersey{JId = 4, JBrand = "Fox", JModel = "2019 360 Model", JColor = "Blue/White", JSize = "M", JPrice = 59.99, JImageUrl = "", IsJOfTheWeek = false },
 
             };
         }
