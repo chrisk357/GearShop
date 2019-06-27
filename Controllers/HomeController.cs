@@ -24,6 +24,9 @@ namespace GearShop.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            var jerseys = _jerseyRepository.GetAllJerseys().OrderBy(j => j.JBrand);
+            var pants = _pantRepository.GetAllPants().OrderBy(p => p.PBrand);
+
             return View();
         }
     }
