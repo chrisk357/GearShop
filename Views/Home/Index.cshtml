@@ -3,23 +3,37 @@
     Layout = "_Layout";
 }
 
-<h2>Gear Main</h2>
+<h1 class="text-center" style="font-weight: bolder;">Gear Store Closeout</h1>
 
 @foreach (var jersey in Model.Jerseys)
 {
-    <div>
-        <h3>@jersey.JBrand</h3>
-        <h3>@jersey.JModel</h3>
-        <h3>@jersey.JPrice.ToString("c")</h3>
+    <div class="col-sm-4 col-lg-4 col-md-4 jerseybox">
+        <div class="thumbnail">
+           <img src="@jersey.JImageUrl" alt="">
+           <div class="caption">
+                <h4 class="pull-left">@jersey.JBrand</h4>
+        <h4 class="pull-right">@jersey.JModel</h4>
+        <p>@jersey.JPrice.ToString("c")</p>
+           </div>
+        </div>
     </div>
 }
+
+<hr /><hr />
+
+
 @foreach (var pant in Model.Pants)
     {
-     <div>
-         <h3>@pant.PBrand</h3>
-         <h3>@pant.PModel</h3>
-         <h3>@pant.PPrice.ToString("c")</h3>
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@pant.PImageUrl" alt="">
+     <div class="caption">
+         <h4 class="pull-left">@pant.PBrand</h4>
+         <h4 class="pull-right">@pant.PModel</h4>
+         <p>@pant.PPrice.ToString("c")</p>
      </div>
+        </div>
+    </div>
 
     }
 
