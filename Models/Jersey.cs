@@ -1,7 +1,10 @@
-﻿namespace GearShop.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GearShop.Models
 {
     public class Jersey
     {
+        
         public int JId { get; set; }
         public string JBrand { get; set; }
         public string JModel { get; set; }
