@@ -4,7 +4,7 @@ namespace GearShop.Models
 {
     public class Jersey
     {
-        
+        [Key]
         public int JId { get; set; }
         public string JBrand { get; set; }
         public string JModel { get; set; }

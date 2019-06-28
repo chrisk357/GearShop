@@ -1,7 +1,10 @@
-﻿namespace GearShop.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GearShop.Models
 {
     public class Pant
     {
+        [Key]
         public int PId { get; set; }
         public string PBrand { get; set; }
         public string PModel { get; set; }

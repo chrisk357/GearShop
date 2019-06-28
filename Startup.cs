@@ -10,6 +10,7 @@ namespace GearShop
     public class Startup
     {
         public IConfiguration Configuration { get; }
+      
 
         public Startup(IConfiguration configuration)
         {
