@@ -8,6 +8,7 @@ namespace GearShop.Models
     {
         public static void Seed(AppDbContext context)
         {
+
             if (!context.Jerseys.Any())
             {
                 context.AddRange

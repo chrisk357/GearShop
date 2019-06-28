@@ -10,7 +10,22 @@ namespace GearShop
     {
         public static void Main(string[] args)
         {
-            
+            var host = CreateWebHostBuilder(args);
+            SeedDb(host);
+            host.Run();
+        }
+        private static void SeedDb(IWebHost host)
+        {
+            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+            using (var scope = scopeFactory.CreateScope())
+            {
+                var seeder = scope.ServiceProvider.GetService<StoreSeed>
+            }
+        }
+
+
+
+/*            
             //   CreateWebHostBuilder(args).Build().Run();
             var host = CreateWebHostBuilder(args).Build();
 
@@ -35,3 +50,5 @@ namespace GearShop
                 .UseStartup<Startup>();
     }
 }
+
+    */
