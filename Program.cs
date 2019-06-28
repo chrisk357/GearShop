@@ -10,22 +10,7 @@ namespace GearShop
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args);
-            SeedDb(host);
-            host.Run();
-        }
-        private static void SeedDb(IWebHost host)
-        {
-            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
-            using (var scope = scopeFactory.CreateScope())
-            {
-                var seeder = scope.ServiceProvider.GetService<StoreSeed>
-            }
-        }
-
-
-
-/*            
+           
             //   CreateWebHostBuilder(args).Build().Run();
             var host = CreateWebHostBuilder(args).Build();
 
@@ -51,4 +36,32 @@ namespace GearShop
     }
 }
 
-    */
+/*
+            var host = BuildWebHost(args);
+            SeedDb(host);
+            host.Run();
+        }
+        private static void SeedDb(IWebHost host)
+        {
+            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+            using (var scope = scopeFactory.CreateScope())
+            {
+                var seeder = scope.ServiceProvider.GetService<StoreSeeder>();
+                seeder.SeedAsync().Wait();
+            }
+        }
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+            .ConfigureAppConfiguration(SetupConfiguration)
+            .UseStartup<Startup>()
+            .Build();
+
+        private static void SetupConfiguration(WebHostBuilderContext ctx, IconfigurationBuilder builder)
+        {
+            builder.Sources.Clear();
+            builder.AddJsonFile("config.json", false, true)
+                .AddEnvironmentVariables();
+        }
+    }
+
+*/

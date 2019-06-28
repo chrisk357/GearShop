@@ -14,5 +14,21 @@ namespace GearShop.Models
         }
         public DbSet<Jersey> Jerseys { get; set; }
         public DbSet<Pant> Pants { get; set; }
+
+
+
+
+/*     
+ *     protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<Jersey>();
+            builder.Entity<Pant>();
+}*/
+
+
+
+
+
     }
 }

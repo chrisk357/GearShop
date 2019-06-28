@@ -9,7 +9,11 @@ namespace GearShop.Models
         public static void Seed(AppDbContext context)
         {
 
-            if (!context.Jerseys.Any())
+
+
+
+
+/*            if (!context.Jerseys.Any())
             {
                 context.AddRange
                     (
@@ -37,6 +41,7 @@ namespace GearShop.Models
                     );
                 context.SaveChanges();
             }
+        */
         }
     }
 }
