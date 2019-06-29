@@ -1,0 +1,24 @@
+﻿
+@model Pant
+@{
+    Layout = "_Layout";
+}
+
+
+<h2>Details</h2>
+
+
+
+<div class="thumbnail">
+    <img alt="@Model.PBrand" src="@Model.PImageUrl">
+    <div class="caption">
+        <h4 class="pull-left">@Model.PBrand</h4>
+        <h4 class="pull-right">@Model.PModel</h4>
+        <br /><br />
+
+
+        <p>@Model.PColor</p>
+        <p>@Model.PSize</p>
+        <p>@Model.PPrice.ToString("c")</p>
+    </div>
+</div>

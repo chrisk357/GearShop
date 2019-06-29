@@ -7,37 +7,37 @@
 
 @foreach (var jersey in Model.Jerseys)
 {
-    <div class="col-sm-4 col-lg-4 col-md-4 jerseybox">
+    <div class="col-sm-3 col-lg-3 col-md-3">
         <div class="thumbnail">
-           <img src="@jersey.JImageUrl" alt="">
-           <div class="caption">
+            <img src="@jersey.JImageUrl" alt="">
+            <div class="caption">
                 <h4 class="pull-left">@jersey.JBrand</h4>
-        <h4 class="pull-right">
-           <a asp-controller="Home" asp-action="JDetails" 
-              asp-route-id="@jersey.JId">@jersey.JModel</a>               
-        </h4>
-        <p>@jersey.JPrice.ToString("c")</p>
-           </div>
+                <h4 class="pull-right">
+                    <a asp-controller="Home" asp-action="JDetails"
+                       asp-route-id="@jersey.JId">@jersey.JModel</a>
+                </h4>
+                <br />
+                <p>@jersey.JPrice.ToString("c")</p>
+            </div>
         </div>
     </div>
 }
 
-
-
-
 @foreach (var pant in Model.Pants)
-    {
-    <div class="col-sm-4 col-lg-4 col-md-4">
+{
+    <div class="col-sm-3 col-lg-3 col-md-3">
         <div class="thumbnail">
             <img src="@pant.PImageUrl" alt="">
-     <div class="caption">
-         <h4 class="pull-left">@pant.PBrand</h4>
-         <h4 class="pull-right">@pant.PModel</h4>
-         <p>@pant.PPrice.ToString("c")</p>
-     </div>
+            <div class="caption">
+                <h4 class="pull-left">@pant.PBrand</h4>
+                <h4 class="pull-right">
+                    <a asp-controller="Home" asp-action="PDetails"
+                       asp-route-id="@pant.PId">@pant.PModel</a>
+                </h4>
+                <br />
+                <p>@pant.PPrice.ToString("c")</p>
+            </div>
         </div>
     </div>
 
-    }
-
-
+}
