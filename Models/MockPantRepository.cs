@@ -19,12 +19,12 @@ namespace GearShop.Models
         {
             _pants = new List<Pant>
             {
-                new Pant{PId = 1, PBrand = "Fox", PModel = "2019 360 Model", PColor = "Red/Black", PSize = "34", PPrice = 99.99, PImageUrl = "", IsPOfTheWeek = false },
-                new Pant{PId = 2, PBrand = "Fox", PModel = "2019 360 Model", PColor = "Red/Black", PSize = "36", PPrice = 89.99, PImageUrl = "", IsPOfTheWeek = false },
-                new Pant{PId = 3, PBrand = "Fox", PModel = "2019 360 Model", PColor = "Blue/White", PSize = "30", PPrice = 89.99, PImageUrl = "", IsPOfTheWeek = false },
-                new Pant{PId = 4, PBrand = "Fox", PModel = "2019 180 Model", PColor = "Green/Yellow", PSize = "26", PPrice = 59.99, PImageUrl = "", IsPOfTheWeek = false },
-                new Pant{PId = 5, PBrand = "Fox", PModel = "2019 180 Model", PColor = "Blue/White", PSize = "30", PPrice = 59.99, PImageUrl = "", IsPOfTheWeek = false },
-                new Pant{PId = 6, PBrand = "Fox", PModel = "2019 180 Model", PColor = "Green/Yellow", PSize = "28", PPrice = 49.99, PImageUrl = "", IsPOfTheWeek = false },
+                new Pant{PId = 1, PBrand = "Fox", PModel = "2019 360 Model", PColor = "Red/Black", PSize = 34, PPrice = 99.99, PImageUrl = "", IsPOfTheWeek = false },
+                new Pant{PId = 2, PBrand = "Fox", PModel = "2019 360 Model", PColor = "Red/Black", PSize = 36, PPrice = 89.99, PImageUrl = "", IsPOfTheWeek = false },
+                new Pant{PId = 3, PBrand = "Fox", PModel = "2019 360 Model", PColor = "Blue/White", PSize = 30, PPrice = 89.99, PImageUrl = "", IsPOfTheWeek = false },
+                new Pant{PId = 4, PBrand = "Fox", PModel = "2019 180 Model", PColor = "Green/Yellow", PSize = 26, PPrice = 59.99, PImageUrl = "", IsPOfTheWeek = false },
+                new Pant{PId = 5, PBrand = "Fox", PModel = "2019 180 Model", PColor = "Blue/White", PSize = 30, PPrice = 59.99, PImageUrl = "", IsPOfTheWeek = false },
+                new Pant{PId = 6, PBrand = "Fox", PModel = "2019 180 Model", PColor = "Green/Yellow", PSize = 28, PPrice = 49.99, PImageUrl = "", IsPOfTheWeek = false },
 
             };
         }

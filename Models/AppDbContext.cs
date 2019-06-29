@@ -17,6 +17,7 @@ namespace GearShop.Models
 
 
 
+        public DbSet<Helmet> Helmets { get; set; }
 
 /*     
  *     protected override void OnModelCreating(ModelBuilder builder)

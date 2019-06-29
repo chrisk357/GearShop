@@ -26,6 +26,7 @@ namespace GearShop
             services.AddTransient<IPantRepository, PantRepository>();
 
             services.AddTransient<IJerseyRepository, JerseyRepository>();
+            services.AddTransient<IHelmetRepository, HelmetRepository>();
 
             services.AddMvc();
 

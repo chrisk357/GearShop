@@ -8,5 +8,6 @@ namespace GearShop.ViewModels
         public string Title { get; set; }
         public List<Jersey> Jerseys { get; set; }
         public List<Pant> Pants { get; set; }
+        public List<Helmet> Helmets { get; set; }
     }
 }

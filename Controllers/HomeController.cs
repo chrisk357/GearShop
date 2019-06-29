@@ -11,11 +11,13 @@ namespace GearShop.Controllers
     {
         private readonly IJerseyRepository _jerseyRepository;
         private readonly IPantRepository _pantRepository;
+        private readonly IHelmetRepository _helmetRepository;
 
-        public HomeController(IJerseyRepository jerseyRepository, IPantRepository pantRepository)
+        public HomeController(IJerseyRepository jerseyRepository, IPantRepository pantRepository, IHelmetRepository helmetRepository)
         {
             _jerseyRepository = jerseyRepository;
             _pantRepository = pantRepository;
+            _helmetRepository = helmetRepository;
         }
 
 
@@ -24,11 +26,13 @@ namespace GearShop.Controllers
         {
             var jerseys = _jerseyRepository.GetAllJerseys().OrderBy(j => j.JBrand);
             var pants = _pantRepository.GetAllPants().OrderBy(p => p.PBrand);
+            var helmets = _helmetRepository.GetAllHelmets().OrderBy(h => h.HBrand);
             var homeViewModel = new HomeViewModel()
             {
                 Title = "All your Gear Needs",
                 Jerseys = jerseys.ToList(),
-                Pants = pants.ToList()
+                Pants = pants.ToList(),
+                Helmets = helmets.ToList()
             };
 
             return View(homeViewModel);
