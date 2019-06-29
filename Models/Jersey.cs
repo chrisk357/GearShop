@@ -11,8 +11,10 @@ namespace GearShop.Models
         public string JColor { get; set; }
         public string JSize { get; set; }
         public double JPrice { get; set; }
+        public double JSalePrice { get; set; }
         public string JImageUrl { get; set; }
         public bool IsJOfTheWeek { get; set; }
+        public int JQuantityOnHand { get; set; }
 
     }
 }

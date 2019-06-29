@@ -11,8 +11,10 @@ namespace GearShop.Models
         public string PColor { get; set; }
         public string PSize { get; set; }
         public double PPrice { get; set; }
+        public double PSalePrice { get; set; }
         public string PImageUrl { get; set; }
         public bool IsPOfTheWeek { get; set; }
+        public int PQuantityOnHand { get; set; }
 
     }
 }
