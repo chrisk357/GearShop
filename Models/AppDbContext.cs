@@ -18,14 +18,15 @@ namespace GearShop.Models
 
 
         public DbSet<Helmet> Helmets { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
-/*     
- *     protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            builder.Entity<Jersey>();
-            builder.Entity<Pant>();
-}*/
+        /*     
+         *     protected override void OnModelCreating(ModelBuilder builder)
+                {
+                    base.OnModelCreating(builder);
+                    builder.Entity<Jersey>();
+                    builder.Entity<Pant>();
+        }*/
 
 
 
