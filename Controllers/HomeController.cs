@@ -37,5 +37,29 @@ namespace GearShop.Controllers
 
             return View(homeViewModel);
         }
+        public IActionResult JDetails(int id)
+        {
+            var jersey = _jerseyRepository.GetJerseyById(id);
+            if (jersey == null)
+                return NotFound();
+
+            return View(jersey);
+        }
+
+        public IActionResult PDetails(int id)
+        {
+            var pant = _pantRepository.GetPantById(id);
+            if (pant == null)
+                return NotFound();
+            return View(pant);
+        }
+
+
+
+
+
     }
+
+
+
 }

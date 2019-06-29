@@ -1,4 +1,4 @@
-﻿@model GearShop.ViewModels.HomeViewModel
+﻿@model HomeViewModel
 @{
     Layout = "_Layout";
 }
@@ -12,7 +12,10 @@
            <img src="@jersey.JImageUrl" alt="">
            <div class="caption">
                 <h4 class="pull-left">@jersey.JBrand</h4>
-        <h4 class="pull-right">@jersey.JModel</h4>
+        <h4 class="pull-right">
+           <a asp-controller="Home" asp-action="JDetails" 
+              asp-route-id="@jersey.JId">@jersey.JModel</a>               
+        </h4>
         <p>@jersey.JPrice.ToString("c")</p>
            </div>
         </div>
