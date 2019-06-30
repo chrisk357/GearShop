@@ -1,0 +1,24 @@
+﻿
+@model Helmet
+@{
+    Layout = "_Layout";
+}
+
+<h2>Details</h2>
+
+
+
+<div class="thumbnail">
+    <img alt="@Model.HBrand" src="@Model.HImageUrl">
+    <div class="caption">
+        <h4 class="pull-left">@Model.HBrand</h4>
+        <h4 class="pull-right">@Model.HModel</h4>
+        <br /><br />
+
+
+        <p>@Model.HColor</p>
+        <p>@Model.HSize</p>
+        <p>@Model.HPrice.ToString("c")</p>
+    </div>
+</div>
+

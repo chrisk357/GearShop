@@ -54,7 +54,13 @@ namespace GearShop.Controllers
             return View(pant);
         }
 
-
+        public IActionResult HDetails(int id)
+        {
+            var helmet = _helmetRepository.GetHelmetById(id);
+            if (helmet == null)
+                return NotFound();
+            return View(helmet);
+        }
 
 
 

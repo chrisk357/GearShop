@@ -12,10 +12,10 @@
             <img src="@jersey.JImageUrl" alt="">
             <div class="caption">
                 <h4 class="pull-left">@jersey.JBrand</h4>
-                <h4 class="pull-right">
+                <h5 class="pull-left">
                     <a asp-controller="Home" asp-action="JDetails"
                        asp-route-id="@jersey.JId">@jersey.JModel</a>
-                </h4>
+                </h5>
                 <br />
                 <p>@jersey.JPrice.ToString("c")</p>
             </div>
@@ -30,12 +30,31 @@
             <img src="@pant.PImageUrl" alt="">
             <div class="caption">
                 <h4 class="pull-left">@pant.PBrand</h4>
-                <h4 class="pull-right">
+                <h5 class="pull-left">
                     <a asp-controller="Home" asp-action="PDetails"
                        asp-route-id="@pant.PId">@pant.PModel</a>
-                </h4>
+                </h5>
                 <br />
                 <p>@pant.PPrice.ToString("c")</p>
+            </div>
+        </div>
+    </div>
+
+}
+
+@foreach (var helmet in Model.Helmets)
+{
+    <div class="col-sm-3 col-lg-3 col-md-3">
+        <div class="thumbnail">
+            <img src="@helmet.HImageUrl" alt="">
+            <div class="caption">
+                <h4 class="pull-left">@helmet.HBrand</h4>
+                <h5 class="pull-left">
+                    <a asp-controller="Home" asp-action="HDetails"
+                       asp-route-id="@helmet.HId">@helmet.HModel</a>
+                </h5>
+                <br />
+                <p>@helmet.HPrice.ToString("c")</p>
             </div>
         </div>
     </div>
