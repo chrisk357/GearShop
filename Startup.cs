@@ -23,6 +23,7 @@ namespace GearShop
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+
             services.AddTransient<IPantRepository, PantRepository>();
 
             services.AddTransient<IJerseyRepository, JerseyRepository>();
@@ -37,6 +38,15 @@ namespace GearShop
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
 
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
+            }
+            else
+            {
+                app.UseExceptionHandler("/AppException");
+            }
 
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
@@ -52,6 +62,11 @@ namespace GearShop
 
             }
         );
+
+
+
+            DbInitializer.Seed(app);
+
         }
     }
 }

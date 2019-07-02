@@ -18,5 +18,10 @@ namespace GearShop.Models
             _appDbContext.Feedbacks.Add(feedback);
             _appDbContext.SaveChanges();
         }
+
+        public IEnumerable<Feedback> GetFeedbacksForGear(int gearId)
+        {
+            return _appDbContext.Feedbacks.Where(f => f.Feedback.FeedbackIdd == gearId);
+        }
     }
 }

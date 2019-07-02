@@ -8,5 +8,7 @@ namespace GearShop.Models
     public interface IFeedbackRepository
     {
         void AddFeedback(Feedback feedback);
+
+        IEnumerable<Feedback> GetFeedbacksForGear(int gearId);
     }
 }

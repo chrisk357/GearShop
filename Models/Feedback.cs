@@ -19,6 +19,7 @@ namespace GearShop.Models
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
         [Required, StringLength(5000, ErrorMessage = "Dont forget your message")]
+
         public string Message { get; set; }
     }
 }
