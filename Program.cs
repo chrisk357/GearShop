@@ -11,48 +11,61 @@ namespace GearShop
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-         //    .UseApplicationInsights()
-             .UseKestrel()
-             .UseContentRoot(Directory.GetCurrentDirectory())
-             .UseIISIntegration()
-             .UseStartup<Startup>()
-             .Build();
+            BuildWebHost(args).Run();
 
-            host.Run();
+
+
+
+
+            //    var host = new WebHostBuilder()
+            //    .UseApplicationInsights()
+            //    .UseKestrel()
+            //    .UseContentRoot(Directory.GetCurrentDirectory())
+            //    .UseIISIntegration()
+            //    .UseStartup<Startup>()
+            //       .Build();
+
+            //     host.Run();
         }
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
+              .UseStartup<Startup>()
+              .UseDefaultServiceProvider(options =>
+              options.ValidateScopes = false)
+                  .Build();
 
 
 
 
 
 
+            //   CreateWebHostBuilder(args).Build().Run();
 
-        //   CreateWebHostBuilder(args).Build().Run();
 
+            /*        var host = CreateWebHostBuilder(args).Build();
 
-        /*        var host = CreateWebHostBuilder(args).Build();
-
-                    using (var scope = host.Services.CreateScope())
-                    {
-                        var services = scope.ServiceProvider;
-                        try
+                        using (var scope = host.Services.CreateScope())
                         {
-                            var context = services.GetRequiredService<AppDbContext>();
-                            DbInitializer.Seed(context);
+                            var services = scope.ServiceProvider;
+                            try
+                            {
+                                var context = services.GetRequiredService<AppDbContext>();
+                                DbInitializer.Seed(context);
+                            }
+                            catch (Exception)
+                            {
+                                //We could log this in a real situation
+                            }
                         }
-                        catch (Exception)
-                        {
-                            //We could log this in a real situation
-                        }
+                        host.Run();
                     }
-                    host.Run();
-                }
 
-                public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-                    WebHost.CreateDefaultBuilder(args)
-                        .UseStartup<Startup>();
-                        */
+                    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+                        WebHost.CreateDefaultBuilder(args)
+                            .UseStartup<Startup>();
+                            */
+        }
     }
 }
 

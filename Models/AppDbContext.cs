@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace GearShop.Models
 {
-    public class AppDbContext : IdentityDbContext<ApplicationUser>
+    public class AppDbContext : IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -21,6 +22,13 @@ namespace GearShop.Models
 
         public DbSet<Helmet> Helmets { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
+
 
         /*     
          *     protected override void OnModelCreating(ModelBuilder builder)

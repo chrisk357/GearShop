@@ -21,7 +21,12 @@ namespace GearShop.Models
 
         public IEnumerable<Feedback> GetFeedbacksForGear(int gearId)
         {
-            return _appDbContext.Feedbacks.Where(f => f.Feedback.FeedbackIdd == gearId);
+            throw new NotImplementedException();
         }
+
+        /*        public IEnumerable<Feedback> GetFeedbacksForGear(int gearId)
+                {
+                    return _appDbContext.Feedbacks.Where(f => f.Feedback.FeedbackIdd == gearId);
+                }*/
     }
 }
